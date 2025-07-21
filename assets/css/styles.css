@@ -5,7 +5,7 @@
   --header-height: 3rem;
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 250;
+  --hue-color: 340;
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -391,9 +391,13 @@ img {
 /*==================== ABOUT ====================*/
 .about__img {
   width: 200px;
+  height: 350px;
+  object-fit: cover;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
+  filter: drop-shadow(5px 8px 10px pink);
+
 }
 
 .about__description {
@@ -1311,7 +1315,8 @@ img {
   row-gap: 3.5rem;
    display: flex;
    width: 1000px;
-  justify-content: center;
+  justify-content: space-around;
+
   /* align-items: center; */
 }
 
@@ -1358,6 +1363,17 @@ img {
   bottom: 7rem;
   transform: rotate(15deg);
   opacity: .1;
+}
+
+@media(max-width:600px){
+  .qualification__img {
+  width: 300px;
+  position: absolute;
+  left: -10rem;
+  bottom: 23rem;
+  transform: rotate(15deg);
+  opacity: .1;
+}
 }
 
 /* Section styling */
@@ -1611,6 +1627,8 @@ img {
     margin: 20px auto ;
     padding: 15px ;
     text-align: center;
+    flex-direction: column;
+    display: flex;
   }
 
   h1, h2, h3, p {
